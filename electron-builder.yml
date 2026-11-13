@@ -1,0 +1,30 @@
+appId: com.ytautopost.studio
+productName: YT AutoPost Studio
+copyright: Copyright © 2026 YT AutoPost Studio
+directories:
+  output: release
+files:
+  - dist/**/*
+  - dist-server/**/*
+  - dist-electron/**/*
+  - electron/preload.cjs
+  - electron/assets/**/*
+  - package.json
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  icon: electron/assets/icon.ico
+  signAndEditExecutable: false
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: YT AutoPost Studio
+portable:
+  artifactName: YT-AutoPost-Studio-Portable.exe
